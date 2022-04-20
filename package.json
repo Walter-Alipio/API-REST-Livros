@@ -3,14 +3,23 @@
   "version": "1.0.0",
   "description": "Curso de API Rest com Express e MongoDB",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon server.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "Reste",
+    "API",
+    "Express",
+    "MongoDB"
+  ],
+  "author": "Walter Alípio",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "express": "^4.17.3"
   }
 }
