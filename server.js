@@ -1,21 +1,8 @@
-const http = require("http"); // forma antiga de lhe dar com modulos, nativa do Node
-//http é uma biblioteca interna do Node
-const port = 3000;
+import app from "./src/app.js";
 
-const routes = {
-    "/": "Curso de Node",
-    "/livros": "Entrei na página de livros",
-    "/autores": "Listagem de autores",
-    "/editora": "Página editora",
-    "/sobre": "Informações sobre o projeto",
-};
+const port = process.env.port || 3000; //ou porta do ambiente de produção ou 3000
 
-//usamos o metodo .createServer da biblioteca para subir nosso servidor local
-const server = http.createServer((req, res) => {
-    res.writeHead(200, { "Content-Type": "text/plain" }); //resposta da requisição
-    res.end(routes[req.url]);
-});
 //executando o servidor
-server.listen(port, () => {
+app.listen(port, () => {
     console.log(`Servidor escutando em http://localhost:${port}`);
 });
