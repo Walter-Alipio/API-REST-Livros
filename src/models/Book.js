@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+
 //esquema de documentos da coleção
 const bookSchema = new mongoose.Schema({
     id: { type: String },
