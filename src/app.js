@@ -1,18 +1,13 @@
 import express from "express";
+import db from "./config/DbConnect.js";
+import books from "./models/Book.js";
+
+db.on("error", console.log.bind(console, "Erro ao tentar conectar bd"));
+db.once("open", () => {
+    console.log("Conexão com o db feita com sucesso.");
+});
 
 const app = new express();
-
-//array que serve de banco de dados para teste
-const books = [
-    {
-        id: 1,
-        titulo: "O senhor dos anéis",
-    },
-    {
-        id: 2,
-        titulo: "O Hobbit",
-    },
-];
 
 //função de apoio procura no nosso array pela posição do id informado
 const serachBook = (id) => {
@@ -27,8 +22,11 @@ app.get("/", (req, res) => {
 });
 
 //página de livros
+//Sempre identificamos documentos e coleções de documentos pelo seu nome no plural.
 app.get("/livros", (req, res) => {
-    res.status(200).json(books);
+    books.find((err, books) => {
+        res.status(200).json(books);
+    });
 });
 
 //livro especifico
