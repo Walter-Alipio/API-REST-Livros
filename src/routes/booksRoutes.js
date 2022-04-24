@@ -1,9 +1,9 @@
 import express from "express";
 import BooksController from "../controllers/livrosController.js";
 
-const routerBooks = express.Router();
+const routesBooks = express.Router();
 // ":" indica que id será enviado
-routerBooks
+routesBooks
     .get("/livros", BooksController.listBooks) //lista todos os livros
     .get("/livros/busca", BooksController.listBookByPublisher) //buca por editoras
     .get("/livros/:id", BooksController.listBookById) //lista por id
@@ -11,4 +11,4 @@ routerBooks
     .put("/livros/:id", BooksController.updateBook) //atualizar livro
     .delete("/livros/:id", BooksController.deleteBook); //excluir livro
 
-export default routerBooks; //exportando as rodas de livros
+export default routesBooks; //exportando as rodas de livros
