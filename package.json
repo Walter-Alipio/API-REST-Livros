@@ -9,7 +9,7 @@
     "dev": "nodemon server.js"
   },
   "keywords": [
-    "Reste",
+    "Rest",
     "API",
     "Express",
     "MongoDB"
@@ -20,6 +20,7 @@
     "nodemon": "^2.0.15"
   },
   "dependencies": {
+    "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "mongoose": "^6.2.6"
   }

@@ -1,8 +1,8 @@
 //Todas as rotas seram concentradas nesse arquivo
 
 import express from "express";
-
-import router from "./booksRoutes.js";
+import routerBooks from "./booksRoutes.js";
+import routerAuthor from "./authorsRoutes.js";
 
 const routes = (app) => {
     //página inicial
@@ -10,7 +10,7 @@ const routes = (app) => {
         res.status(200).send("Curso de node");
     });
 
-    app.use(express.json(), router);
+    app.use(express.json(), routerBooks, routerAuthor);
 };
 
 export default routes;

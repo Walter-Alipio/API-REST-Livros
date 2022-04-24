@@ -5,22 +5,29 @@ class BooksController {
     //listar todos os livros
     static listBooks = (req, res) => {
         //Sempre identificamos documentos e coleções de documentos pelo seu nome no plural.
-        books.find((err, books) => {
-            res.status(200).json(books);
-        });
+        books
+            .find()
+            .populate("author") //populate faz a associação de um campo especifico "author"
+            .exec((err, books) => {
+                res.status(200).json(books);
+            });
     };
     //listar livro por id
     static listBookById = (req, res) => {
         const id = req.params.id; //params pega o atributo na URI
-        books.findById(id, (err, books) => {
-            if (err) {
-                res.status(400).send({
-                    message: `${err.message} - Id do livro não localizado`,
-                });
-                return;
-            }
-            res.status(200).send(books);
-        });
+        books
+            .findById(id)
+            .populate("author", "name")
+            .exec((err, books) => {
+                //tratamento de erro
+                if (err) {
+                    res.status(400).send({
+                        message: `${err.message} - Id do livro não localizado`,
+                    });
+                    return;
+                }
+                res.status(200).send(books);
+            });
     };
     //inclui livro
     static registerABook = (req, res) => {
@@ -55,11 +62,24 @@ class BooksController {
         const id = req.params.id;
         /*usamos params para pegar o que foi passado no cabeçalho da requisição, na URI*/
         books.findByIdAndDelete(id, (err) => {
+            //tratamento de erro
             if (err) {
                 res.status(500).send({ message: err.message });
                 return;
             }
             res.status(200).send({ message: "Livro removido com sucesso." });
+        });
+    };
+    //listar por editora
+    static listBookByPublisher = (req, res) => {
+        const publisher = req.query.publisher;
+        books.find({ publisher: publisher }, {}, (err, books) => {
+            //tratamento de erro
+            if (err) {
+                res.status(500).send({ message: err.message });
+                return;
+            }
+            res.status(200).send(books);
         });
     };
 }
