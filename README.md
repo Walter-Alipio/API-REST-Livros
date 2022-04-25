@@ -10,6 +10,7 @@ API para cadastro e consulta de livros
 -   Express v4.17.3
 -   Mongoose v6.2.6
 -   Dotenv v16.0.0
+-   [AtlasDB](https://www.mongodb.com/cloud/atlas/register2?utm_content=rlsapostreg&utm_source=google&utm_campaign=gs_americas_rlsamultirest_search_brand_dsa_atlas_desktop_rlsa_postreg&utm_term=&utm_medium=cpc_paid_search&utm_ad=&utm_ad_campaign_id=14412646452&adgroup=131761126052&gclid=CjwKCAjwjZmTBhB4EiwAynRmD3JD4QUDj02w3aI9r5GYfxuNvWxmExkd8_g-rcq5gJXJbv38UMlBqhoCIrwQAvD_BwE)
 
 #
 
