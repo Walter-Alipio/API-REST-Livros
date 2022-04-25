@@ -1,5 +1,5 @@
 import mongoose from "mongoose"; //biblioteca mongoose é baseada em schemas
-//qui é feita a conexão com o athlas db
+//aqui é feita a conexão com o atlas db
 
 const dbHost = process.env.DB_HOST;
 const dbUser = process.env.DB_USER;
