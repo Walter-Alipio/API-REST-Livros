@@ -23,8 +23,10 @@ API para cadastro e consulta de livros
 ### Instalação
 
 Clone o repositório e instale as dependencias.
-Crie no root o arquivo ".env" para conexão com o BD seguindo o modelo disponivel em ".env.example".
-Inicie o servidor digitando "npm run dev"
+Crie no root o arquivo <code>.env</code> para conexão com o BD seguindo o modelo disponivel em <code>.env.example</code>.
+Inicie o servidor digitando <code>npm run dev</code>.
+
+#
 
 ### Técnologias utilizadas:
 
@@ -38,14 +40,18 @@ Inicie o servidor digitando "npm run dev"
 
 </div>
 
+#
+
 ### Descrição do projeto:
 
 <p>Projeto desenvolvido no curso API-Rest com Express e MongoDB da plataforma Alura.</p>
-<p>Através da rota "/livros" com os metodos HTTP GET,POST,PUT e DELETE, é possível incluir um novo livro ou excluir. Possui também a rota "/autores" com os mesmos metodos e que é requerimento para conseguir cadastrar um novo livro.</p>
+<p>Através da rota <code>/livros</code> com os metodos HTTP GET,POST,PUT e DELETE, é possível incluir um novo livro ou excluir. Possui também a rota <code>/autores</code> com os mesmos metodos e que é requerimento para conseguir cadastrar um novo livro.</p>
+
+#
 
 ### Acesso ao projeto:
 
-Deploy no heroku:
-home:(https://apirest-bookstore.herokuapp.com/)
-livros:(https://apirest-bookstore.herokuapp.com/livros)
-autores:(https://apirest-bookstore.herokuapp.com/autores)
+Deploy no heroku:<br>
+home:(https://apirest-bookstore.herokuapp.com/)<br>
+livros:(https://apirest-bookstore.herokuapp.com/livros)<br>
+autores:(https://apirest-bookstore.herokuapp.com/autores)<br>
