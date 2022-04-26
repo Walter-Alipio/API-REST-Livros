@@ -4,7 +4,11 @@
   "description": "Curso de API Rest com Express e MongoDB",
   "main": "index.js",
   "type": "module",
+  "jest": {
+    "transform": {}
+  },
   "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "dev": "nodemon server.js",
     "start": "node server.js"
   },
@@ -17,7 +21,9 @@
   "author": "Walter Alípio",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "jest": "^28.0.0",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.2.2"
   },
   "dependencies": {
     "dotenv": "^16.0.0",
