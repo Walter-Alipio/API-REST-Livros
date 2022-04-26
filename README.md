@@ -4,6 +4,12 @@ API para cadastro e consulta de livros
 
 #
 
+![Badge em desenvolvimento](https://img.shields.io/badge/Status-Em%20Desenvolvimento-green)
+
+-   :construction: Testes automatizados
+
+#
+
 ### Necessário:
 
 -   Node v16.13.0
@@ -49,9 +55,73 @@ Inicie o servidor digitando <code>npm run dev</code>.
 
 #
 
-![Badge em desenvolvimento](https://img.shields.io/badge/Status-Em%20Desenvolvimento-green)
+### requisições GET
 
--   :construction: Testes automatizados
+#### GET autorer
+
+<code>/autores</code> - Lista todos os autores cadastrados
+
+<p>Permite a busca do autor por id <code>/autores/#############</code></p>
+
+#### GET livros
+
+<code>/livros</code> - Lista todos os livros cadastrados
+
+<p>Permite a busca do livro por id:<code>/livros/######</code></p>
+<p>ou pela editora:<code>/livros/busca?editora=nome da editora</code></p>
+
+### Modelo de JSON para requisição POST
+
+#### POST novo autor
+
+<code>
+{   
+    "name": "Fabrio de Melo",
+    "nationality": "Brasileiro"
+}
+</code>
+
+#### POST novo livro
+
+<code>
+{  
+  "title": "Lógica de programação",
+  "author": "######################", //id de autor já cadastrado
+  "numberOfPages": 150,
+  "publisher": "Casa do código"
+}
+
+</code>
+
+#
+
+### PUT
+
+#### PUT autor
+
+<code>/autores/############# <!--id do autor --></code>
+<code>
+{  
+ "nationality": "Chileno"
+}
+</code>
+
+#### PUT livro
+
+<code>/livros/######### <!--id do livro --></code>
+{  
+ "publisher": "Mandala"
+}
+
+### DELETE
+
+#### DELETE autor
+
+<code>/autores/############# <!--id do autor --></code>
+
+#### DELETE livro
+
+<code>/livros/######### <!--id do livro --></code>
 
 #
 
