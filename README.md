@@ -28,13 +28,13 @@ API para cadastro e consulta de livros
 
 ### Instalação
 
-Clone o repositório e instale as dependencias.
-Crie no root o arquivo <code>.env</code> para conexão com o BD seguindo o modelo disponivel em <code>.env.example</code>.
+Clone o repositório e instale as dependências.
+Crie no root o arquivo <code>.env</code> para conexão com o BD seguindo o modelo disponível em <code>.env.example</code>.
 Inicie o servidor digitando <code>npm run dev</code>.
 
 #
 
-### Técnologias utilizadas:
+### Tecnologias utilizadas:
 
 <div>
     <img align="center" alt="Nodejs" height="30"  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg">
@@ -51,7 +51,7 @@ Inicie o servidor digitando <code>npm run dev</code>.
 ### Descrição do projeto:
 
 <p>Projeto desenvolvido no curso API-Rest com Express e MongoDB da plataforma Alura.</p>
-<p>Através da rota <code>/livros</code> com os metodos HTTP GET,POST,PUT e DELETE, é possível incluir um novo livro ou excluir. Possui também a rota <code>/autores</code> com os mesmos metodos e que é requerimento para conseguir cadastrar um novo livro.</p>
+<p>Através da rota <code>/livros</code> com os métodos HTTP GET, POST, PUT e DELETE, é possível incluir um novo livro ou excluir. Possui também a rota <code>/autores</code> com os mesmos métodos e que é requerimento para conseguir cadastrar um novo livro.</p>
 
 #
 
