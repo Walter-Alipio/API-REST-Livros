@@ -75,20 +75,20 @@ Inicie o servidor digitando <code>npm run dev</code>.
 #### POST novo autor
 
 <code>
-{   
-    "name": "Fabrio de Melo",
-    "nationality": "Brasileiro"
-}
+{   <br>
+    "name": "Fabrio de Melo",<br>
+    "nationality": "Brasileiro"<br>
+}<br>
 </code>
 
 #### POST novo livro
 
 <code>
-{  
-  "title": "Lógica de programação",
-  "author": "######################", //id de autor já cadastrado
-  "numberOfPages": 150,
-  "publisher": "Casa do código"
+{  <br>
+  "title": "Lógica de programação",<br>
+  "author": "######################", //id de autor já cadastrado<br>
+  "numberOfPages": 150,<br>
+  "publisher": "Casa do código"<br>
 }
 
 </code>
@@ -99,18 +99,18 @@ Inicie o servidor digitando <code>npm run dev</code>.
 
 #### PUT autor
 
-<code>/autores/############# <!--id do autor --></code>
+<code>/autores/############# </code><br>
 <code>
-{  
- "nationality": "Chileno"
+{ <br>
+"nationality": "Chileno"<br>
 }
 </code>
 
 #### PUT livro
 
-<code>/livros/######### <!--id do livro --></code>
-{  
- "publisher": "Mandala"
+<code>/livros/############</code><br>
+{ <br>
+"publisher": "Mandala"<br>
 }
 
 ### DELETE
