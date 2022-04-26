@@ -5,7 +5,7 @@ const routesBooks = express.Router();
 // ":" indica que id será enviado
 routesBooks
     .get("/livros", BooksController.listBooks) //lista todos os livros
-    .get("/livros/busca", BooksController.listBookByPublisher) //buca por editoras
+    .get("/livros/busca", BooksController.listBookByPublisher) //buca por editoras ex: busca?editora=Alura
     .get("/livros/:id", BooksController.listBookById) //lista por id
     .post("/livros", BooksController.registerABook) //incluir livro
     .put("/livros/:id", BooksController.updateBook) //atualizar livro

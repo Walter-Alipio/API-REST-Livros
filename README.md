@@ -49,6 +49,12 @@ Inicie o servidor digitando <code>npm run dev</code>.
 
 #
 
+![Badge em desenvolvimento](https://img.shields.io/badge/Status-Em%20Desenvolvimento-green)
+
+-   :construction: Testes automatizados
+
+#
+
 ### Acesso ao projeto:
 
 Deploy no heroku:<br>
